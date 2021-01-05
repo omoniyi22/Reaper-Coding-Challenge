@@ -3,7 +3,10 @@ let $ = require("cheerio")
 let product_url = require('./productUrl')
 
 async function configureBrowser(product_name, page_num) {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox"]
+  })
   const page = await browser.newPage()
   await page.goto(product_url(product_name, page_num));
   return page

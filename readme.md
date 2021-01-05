@@ -20,7 +20,7 @@ npm start
 
 
 ```bash
-node server
+node app/index
 ```
 
 
