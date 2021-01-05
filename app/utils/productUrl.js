@@ -1,0 +1,1 @@
+module.exports = (product_name, page_num) => `https://www.ebay.com/sch/i.html?_from=R40&_sacat=0&_nkw=${product_name.replace(/ /g, "+")}&LH_Sold=1&rt=nc&_ipg=200&_pgn=${page_num}`
