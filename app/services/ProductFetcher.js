@@ -7,10 +7,9 @@ module.exports.ProductFetcher = {
   async  DailyJob() {
     const directoryPath = path.join(__dirname, '../../results');
     try {
-      console.log('ds')
       let job = new CronJob('*/60 */23 * * *',
         async function () {
-          console.log('dsd')
+          console.log('I have started my daily job, Please hold on')
           check_product_sold(
 
             ['PS5', 'Xbox Series X'], (data, respose) => {
