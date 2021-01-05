@@ -7,6 +7,8 @@ const { Routes } = require("./routes/index")
 const { ProductFetcher } = require('./services/ProductFetcher')
 const path = require('path')
 
+require("dotenv").config()
+
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -21,4 +23,4 @@ app.use('/api/v1', router);
 
 app.get('*', Pages)
 
-app.listen(8001, () => console.log('Server running'))
+app.listen(process.env.PORT, () => console.log('Server running'))
