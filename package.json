@@ -1,8 +1,8 @@
 {
-  "name": "admin",
+  "name": "Reaper",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,23 +12,15 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.20.0",
-    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
-    "email-templates": "^7.1.0",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.10",
     "fs": "0.0.1-security",
     "jsonfile": "^6.1.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.29",
     "node-cron": "^2.0.3",
     "nodemailer": "^6.4.11",
-    "nodemon": "^2.0.4",
-    "pretty-print-json": "^0.4.1",
-    "prettyjson": "^1.2.1",
     "pug": "^3.0.0",
     "puppeteer": "^5.5.0"
   }
