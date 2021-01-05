@@ -32,8 +32,7 @@ module.exports.ProductFetcher = {
             })
 
         }, null, true, null, null, true)
-
-      // job.start()
+      job.start()
     } catch (error) {
       console.log({ error })
     }
