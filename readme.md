@@ -1,32 +1,42 @@
- Reaper Coding Challenge
+# Reaper Coding Challenge
+
+This app fetches and generates 4 pages of sales of the following product in json format into results folder.
+
+1. ps5 in /result/PS_5 folder
+
+2. xbox series into /result/X_Box folder
+
+## Installation
+
+```bash
+npm install
+```
+
+## Usage
+
+```bash
+npm start 
+```
 
 
-Challenge
-You will be writing a puppeteer bot in Node.js that pulls and spits out the number of sold PS5’s and Xbox Series X per day on eBay. 
+```bash
+node server
+```
 
+## Note 
+- Daily (Cron Time) in the app is formatted as ['*/60 */23 * * *']()
+  - This means that 60 minutes is added to 23 Hours to complete 24 Hours 
+  - ['* */24 * * *']() is wrong because 1 min is add to 24 hour automatically
+- After Data has been generated daily 
+- The End points returns results of data that has been generated in current days and previous days.
 
-We’ll be Evaluating
-Cleanliness of the code
-Documentation
-Elegance of the solution
-Speed
-Task completeness
+## Links
+  - [Api docs](https://documenter.getpostman.com/view/14005736/TVzLpLZY)
 
+  - [XBOX Get endpoint](https://ebay-xbox-ps5-bot.herokuapp.com/api/v1/xbox)
+  - [PS5 Get endpoint](https://ebay-xbox-ps5-bot.herokuapp.com/api/v1/ps5)
 
-Please submit a video walking us through the finished product, your implementation and approach, along with the link to the github repository and the time you spent on the project.
-
-
-
-Email: Admin@nazelabs.com
-
-
-Questions & Answers
-
-1. Where it is said 'per day on eBay' does this mean it would run on its own on a daily basis or everyday the application is accessed?
-The bot should be able to run daily and also pull previous records shown on eBay. For ex. 612 PS5’s sold on 12/24/20.
-
-2. Under the Evaluation Header, where we have Speed, does this mean speed of execution of the bot or speed of completing the project
-Both speed of the bot and the completion of the project. Although the speed of the code is the most important. 
-3. Also i hope Web-Scraping technique is okay for this solution and we don't need access to eBay inhouse api's as this would take some time for approval.
-Yes, web scraping is fine. Do not worry about getting access to eBay’s API.
-
+  - [XBOX Page](https://ebay-xbox-ps5-bot.herokuapp.com/x_box)
+  - [PS5 Page](https://ebay-xbox-ps5-bot.herokuapp.com/ps_5)
+  
+  - [DOC Page](https://ebay-xbox-ps5-bot.herokuapp.com/api/v1/docs)

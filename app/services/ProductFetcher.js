@@ -7,9 +7,10 @@ module.exports.ProductFetcher = {
   async  DailyJob() {
     const directoryPath = path.join(__dirname, '../../results');
     try {
-      let job = new CronJob('* */24 * * *',
+      console.log('ds')
+      let job = new CronJob('*/60 */23 * * *',
         async function () {
-
+          console.log('dsd')
           check_product_sold(
 
             ['PS5', 'Xbox Series X'], (data, respose) => {
@@ -33,7 +34,7 @@ module.exports.ProductFetcher = {
 
         }, null, true, null, null, true)
 
-      job.start()
+      // job.start()
     } catch (error) {
       console.log({ error })
     }
